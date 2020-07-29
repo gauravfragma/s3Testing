@@ -3,6 +3,7 @@ import java.util.Properties
 import org.apache.spark.{SparkConf, SparkContext}
 object AmazonS3Testing {
     def main(args: Array[String]): Unit = {
+        val testV = 10
         val spark = SparkSession.builder.master("local[*]").appName("ReadS3Files").getOrCreate()
         val property = new Properties {
             setProperty("user", "SA")
